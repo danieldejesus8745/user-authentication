@@ -3,10 +3,7 @@ package com.userauthentication.entities;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
 import java.util.UUID;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class AuthenticationTokenTest {
 

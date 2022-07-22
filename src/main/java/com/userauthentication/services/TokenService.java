@@ -37,4 +37,14 @@ public class TokenService {
         return authenticationToken;
     }
 
+    public boolean validateToken(String token) {
+        AuthenticationToken authenticationToken = getToken(UUID.fromString(token));
+
+        if (Objects.isNull(authenticationToken)) {
+            return false;
+        }
+
+        return authenticationToken.getExpiration() > System.currentTimeMillis();
+    }
+
 }
